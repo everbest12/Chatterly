@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Display</title>
+  <style>
+    body{
+        background-color: black;
+        color: white;
+    }
+  </style>
+</head>
+<body>
+  <h2>Type Your Message</h2>
+     <!-- Display area -->
+  <h3>Output:</h3>
+  <p id="outputArea" style="padding: 10px; min-height: 50px;"></p>
+
+  <script src="script.js"></script>
+  <!-- Input area -->
+  <textarea id="inputText" rows="5" cols="30" placeholder="Type something..."></textarea><br><br>
+  
+  <!-- Submit button -->
+  <button id="submitBtn">Display Text</button>
+  
+  <hr>
+
+
+</body>
+
+<script>
+    // Step 1: Get the textarea, button, and output elements
+const input = document.getElementById("inputText");
+const button = document.getElementById("submitBtn");
+const output = document.getElementById("outputArea");
+
+// Step 2: Add click event to the button
+button.addEventListener("click", function () {
+  // Step 3: Get value from textarea and display it
+  const text = input.value;
+  output.textContent = text;
+});
+
+</script>
+</html>

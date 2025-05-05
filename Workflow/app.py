@@ -95,6 +95,6 @@ if __name__ == "__main__":
     print("🤖 LangChain Facebook Bot Ready!")
 
     # Example command
-    user_input = "Post to Facebook: 🚀 Chatterly AI is now posting with LangChain!"
+    user_input = "Post to Facebook: 🚀 WITH AI YOU CAN ACHIEVE ALOT!"
     response = agent.run(user_input)
     print("\nAgent Response:", response)

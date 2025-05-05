@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>30 Modern CSS Loaders</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #0f0f0f;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    h2 {
+      text-align: center;
+      font-weight: 400;
+      color: #00ffff;
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 40px;
+      padding: 20px;
+    }
+    .loader-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .label {
+      font-size: 0.8em;
+      color: #ccc;
+      text-align: center;
+    }
+
+    /* Shared animation keyframes */
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes bounce { to { transform: translateY(-10px); opacity: 0.6; } }
+    @keyframes pulse { 0%,100%{ transform: scale(1); opacity: 0.6; } 50%{ transform: scale(1.5); opacity: 1; } }
+    @keyframes typing { 0%,100%{ transform: scale(1); } 50%{ transform: scale(1.5); } }
+    @keyframes ripple { 0% { transform: scale(0.8); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
+    @keyframes fade { 0%{ opacity: 0.2; transform: scale(1); } 100%{ opacity: 1; transform: scale(1.5); } }
+    @keyframes zoom { 0%{ transform: scale(0.8); } 100%{ transform: scale(1.3); } }
+    @keyframes blink { 0%{ opacity: 1; } 100%{ opacity: 0.1; } }
+    @keyframes slide { 0%{ left: -20px; } 100%{ left: 100%; } }
+    @keyframes stretch { 0%,100%{ height: 6px; } 50%{ height: 20px; } }
+    @keyframes flip { 50% { transform: rotateY(180deg); } }
+
+    /* Loader Styles */
+    .loader1, .loader6, .loader18 { border-radius: 50%; border: 4px solid #333; border-top-color: #00ffcc; width: 40px; height: 40px; animation: spin 1s linear infinite; }
+    .loader2 { width: 20px; height: 20px; background: #ff4081; border-radius: 50%; animation: pulse 0.8s ease-in-out infinite; }
+    .loader3 { display: flex; gap: 5px; } .loader3 div { width: 8px; height: 8px; background: #00e5ff; border-radius: 50%; animation: bounce 0.6s infinite alternate; }
+    .loader3 div:nth-child(2){ animation-delay:0.2s; } .loader3 div:nth-child(3){ animation-delay:0.4s; }
+    .loader4 { width: 20px; height: 20px; background: #ffa726; animation: spin 1s linear infinite; }
+    .loader5 { display: flex; gap: 3px; align-items: flex-end; height: 20px; }
+    .loader5 div { width: 4px; background: #7c4dff; animation: stretch 1s ease-in-out infinite; }
+    .loader5 div:nth-child(2) { animation-delay: 0.1s; } .loader5 div:nth-child(3) { animation-delay: 0.2s; }
+    .loader7 { width: 20px; height: 20px; background: #66bb6a; animation: flip 1s linear infinite; }
+    .loader8 { display: flex; gap: 4px; } .loader8 span { width: 5px; height: 5px; background: #ffca28; border-radius: 50%; animation: typing 1s infinite; }
+    .loader8 span:nth-child(2){ animation-delay:0.2s; } .loader8 span:nth-child(3){ animation-delay:0.4s; }
+    .loader9 { width: 40px; height: 4px; background: #d500f9; position: relative; overflow: hidden; }
+    .loader9::after { content: ''; position: absolute; width: 20px; height: 100%; background: #fff; animation: slide 1s infinite; }
+    .loader10 { width: 20px; height: 20px; border: 2px solid #03dac5; border-radius: 50%; animation: ripple 1s infinite; }
+    .dot { width: 8px; height: 8px; background: #fff; border-radius: 50%; }
+    .rotate { animation: spin 1s linear infinite; }
+    .blink { animation: blink 1s infinite alternate; }
+    .fade { animation: fade 1.2s infinite alternate; }
+    .zoom { animation: zoom 1.2s infinite alternate; }
+    .equalizer div { width: 4px; background: #f50057; animation: stretch 1s ease-in-out infinite; margin: 0 1px; }
+    .equalizer div:nth-child(2){ animation-delay: 0.1s; } .equalizer div:nth-child(3){ animation-delay: 0.2s; }
+
+  </style>
+</head>
+<body>
+  <h2>30 Unique CSS Loaders (Part 1: 1–20)</h2>
+  <div class="grid">
+    <div class="loader-box"><div class="loader1"></div><div class="label">Spinner</div></div>
+    <div class="loader-box"><div class="loader2"></div><div class="label">Pulse</div></div>
+    <div class="loader-box"><div class="loader3"><div></div><div></div><div></div></div><div class="label">Bounce</div></div>
+    <div class="loader-box"><div class="loader4"></div><div class="label">Spin Box</div></div>
+    <div class="loader-box"><div class="loader5"><div></div><div></div><div></div></div><div class="label">Bars</div></div>
+    <div class="loader-box"><div class="loader6"></div><div class="label">Dual Ring</div></div>
+    <div class="loader-box"><div class="loader7"></div><div class="label">Flip Box</div></div>
+    <div class="loader-box"><div class="loader8"><span></span><span></span><span></span></div><div class="label">Typing</div></div>
+    <div class="loader-box"><div class="loader9"></div><div class="label">Slide</div></div>
+    <div class="loader-box"><div class="loader10"></div><div class="label">Ripple</div></div>
+    <div class="loader-box"><div class="dot rotate"></div><div class="label">Dot Spin</div></div>
+    <div class="loader-box"><div class="dot blink"></div><div class="label">Blink</div></div>
+    <div class="loader-box"><div class="dot fade"></div><div class="label">Fade</div></div>
+    <div class="loader-box"><div class="dot zoom"></div><div class="label">Zoom</div></div>
+    <div class="loader-box"><div class="loader3"><div></div><div></div><div></div></div><div class="label">Dot Bounce</div></div>
+    <div class="loader-box"><div class="loader8"><span></span><span></span><span></span></div><div class="label">Bubble</div></div>
+    <div class="loader-box"><div class="loader1" style="border-top-color:#f50057;"></div><div class="label">Spin Pink</div></div>
+    <div class="loader-box"><div class="loader2" style="background:#4caf50;"></div><div class="label">Green Pulse</div></div>
+    <div class="loader-box"><div class="loader4" style="background:#29b6f6;"></div><div class="label">Blue Box</div></div>
+    <div class="loader-box"><div class="loader5 equalizer"><div></div><div></div><div></div></div><div class="label">Equalizer</div></div>
+  </div>
+</body>
+</html>

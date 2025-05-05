@@ -17,7 +17,7 @@ html, body {
     background-color: #6a97d5;
     color: white;
     text-align: center;
-    height: 6vh;
+    height: 10vh;
     border-radius: 7px;
 
 }
@@ -27,7 +27,7 @@ html, body {
     flex-direction: row;
     gap: 2px;
     margin-top: 5px;
-    height: 94vh;
+    height: 87vh;
     overflow: hidden; /* Prevent scrolling */
     border-radius: 7px;
     padding-bottom: 10PX;
@@ -66,14 +66,11 @@ html, body {
     align-items: flex-end;
     font-size: 1rem;
     position: absolute;
-    bottom: 10px;
+    bottom: 15px;
     left: 21%;
     height: 40px;
 }
 
-.sendButton {
-
-}
 
 @media (max-width: 600px) {
     .textInput {
@@ -89,3 +86,115 @@ html, body {
         font-size: 0.9rem;
     }
 }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background: white;
+        border: 1px solid #ccc;
+    }
+    .dropdown-content a {
+        display: block;
+        padding: 8px;
+        text-decoration: none;
+    }
+    .show {
+        display: block;
+  }
+  
+  .buttonContainer {
+    width:55%;
+    min-height: 2.0em;
+    display: flex;
+    align-items: flex-end;
+    font-size: 1rem;
+    gap: 7px;
+    position: absolute;
+    bottom: 10px;
+    padding: 5px;
+    left: 77%;
+    height: 40px;
+}
+
+    .send, .copy, .clear,.download {
+        background-color: green;
+        color: white;
+        width: 8%;
+        height: 40px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        border-color: rgb(123, 20, 220);
+        font-size: 1rem;
+  
+    }
+
+    .download {
+        background-color: blue;
+        color: white;
+        width: 12%;
+        height: 40px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        border-color: rgb(123, 20, 220);
+        font-size: 1rem;
+    }
+
+    .copy {
+        background-color: orange;
+    }
+
+    .clear{
+        background-color: rosybrown;
+    }
+
+    /* .profession {
+        background-color: #6a97d5;
+        color: white;
+        width: 12%;
+        height: 40px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        border-color: rgb(123, 20, 220);
+        font-size: 1rem;
+        position: absolute;
+        bottom: 80%;
+        padding: 5px;
+        left: 86%;
+        height: 40px;
+    }
+     */
+     .aiSettings {
+        background-color: #6a97d5;
+        color: white;
+        width: 25%;
+        height: 60vh;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        border-color: rgb(123, 20, 220);
+        font-size: 1rem;
+        bottom: 20%;
+        padding: 5px;
+        left: 70%;
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+        margin-top: 5px;
+    
+    }
+
+    .aiSettingsComponents{
+        display: flex;
+        flex-direction: column;
+        align-content:space-between ;
+        gap: 10px;
+        padding: 10px;
+        justify-content: space-between;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .profession {
+        background-color: #d56abe;
+        
+        ;
+       
+    }

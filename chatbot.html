@@ -20,12 +20,51 @@
 
 
         <div class="chatbox">Chat Container
-            <div>
-            <input type="text" class="textInput" placeholder="Type your message here...">
-            <button class="sendButton">Send</button>
+            
+            <>
+                <input type="text" class="textInput" placeholder="Type your message here...">
+                <div class="buttonContainer">
+                    <button class="send">Send</button>
+                    <button class="copy">Copy</button>
+                    <button class="clear">Clear</button>
+                    <button class="download">Download</button>
+                </div>
+
+                
+                <div class="aiSettings">
+                    <div class="aiSettingsComponents"> 
+                        <label for="temperature">Temperature:</label>
+                        <input type="range" id="temperature" name="temperature" min="0" max="1" step="0.1">    
+                        <input type="number" max="10000" min="0" step="1" value="1000" class="maxTokens" placeholder="Max Tokens">
+
+                            
+                        <label for="profession">Profession:</label>
+                        <select id="profession" class="profession">
+                          <option value="programmer">Programmer</option>
+                          <option value="doctor">Doctor</option>
+                          <option value="engineer">Engineer</option>
+                          <option value="lawyer">Lawyer</option>
+                          <option value="musician">Musician</option>
+                          <option value="politician">Politician</option>
+                        </select>
+                        
+                        <label for="Language">Language:</label>    <select <select="profession" class="language">
+                            <option value="option1">English</option>
+                            <option value="option2">Spanish</option>
+                            <option value="option3">French</option>
+                            <option value="option1">German</option>
+                            <option value="option2">Italian</option>
+                            <option value="option3">Chinese</option>
+                        </label>
+
+                    </div>
+
+                </div>
+
+               
             </div>
         </div>
-    
+        
 
     </div>
 </div>

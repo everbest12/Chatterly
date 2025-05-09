@@ -12,8 +12,65 @@
     <div class="container">
         <div class="header">
             <div class="chatName"><h2>chatterly</h2></div>
-            <div class="sendIcons"><box-icon name='send' class="send"></box-icon></div>
+            <div class="sendIcons">
+                <box-icon name='send' class="send"></box-icon>
+            </div>
         </div>
+
+    <!-- done with the header -->
+
+    <div class="wrap">
+        <div class="right"></div>
+        <!-- done wit the right -->
+
+        <div class="left">
+            <div class="left1">
+                <div class="setting-row">
+                    <button id="toggleBtn" class="btn" >history</button> 
+                    <button id="togglePopup" class="btn">setting</button>
+                  </div>
+
+                  <div id="popupModal" class="modal">
+                    <div class="modal-content">
+                      <span class="close" id="closePopup">&times;</span>
+                      <a href="#">Home</a>
+                      <a href="#">About</a>
+                      <a href="#">Services</a>
+                      <a href="#">Contact</a>
+                    </div>
+                  </div>
+
+          
+              <!-- Sidebar -->
+              <div id="sidebar" class="sidebar">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+              </div>
+          
+            </div>
+          
+            <!-- Search input only -->
+             <div class="search1">
+            <div class="search">
+              <input type="text" placeholder="Search" class="searchInput" />
+              <div class="searchIcon">
+                <box-icon name='search'></box-icon>
+              </div>
+            </div>
+          
+            <!-- Icons outside search -->
+            <div class="icons1">
+              <box-icon name='send'></box-icon>
+              <box-icon name='copy-alt'></box-icon>
+              <box-icon name='message-alt-x'></box-icon>
+              <box-icon type='solid' name='download'></box-icon>
+            </div>
+        </div>
+          </div>
+          
+    </div>
     </div>
 
     <script src="chat.js"></script>

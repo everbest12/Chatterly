@@ -87,8 +87,12 @@ body{
     padding-top: 60px;
     transition: left 0.3s ease;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
   }
-  
+  .sidebar.fullscreen {
+    width: 100%;
+  }
   .sidebar a {
     padding: 10px 20px;
     text-decoration: none;
@@ -254,3 +258,42 @@ body{
     font-size: small;
 
   }
+
+  /* history close and open */
+  .open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #f4f4f4;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+    position: absolute;
+    top: 5px;
+    width: 100%; /* Uncomment this if you want full width */
+  }
+
+  .header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* or flex-start, depending on layout */
+    width: 100%;
+    gap: 10px;
+  }
+  .edit{
+    display: flex;
+    justify-content: flex-start;
+  
+  }
+  
+  .edit .newChat {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  box-icon svg {
+    fill: #4CAF50; /* or stroke, depending on the icon type */
+  }
+  

@@ -29,3 +29,14 @@ window.addEventListener("click", (event) => {
     popupModal.style.display = "none";
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const editIcon = document.getElementById("editToggle");
+    const sidebar = document.getElementById("sidebar");
+  
+    editIcon.addEventListener("click", function () {
+      sidebar.classList.toggle("fullscreen");
+    });
+  });
+  

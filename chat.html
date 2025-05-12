@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="chat.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="mainContainer">
         <div class="header">
             <div class="chatName"><h2>chatterly</h2></div>
             <div class="sendIcons">
@@ -21,68 +21,59 @@
     <!-- done with the header -->
 
     <div class="wrap">
-        <div class="right"></div>
-        <!-- done wit the right -->
+        <div class="right" id="leftPanel">
+          <div class="wraps">
+            <span>
+            <i class="fa-regular fa-square-xmark" id="toggleExpand" style="color: rebeccapurple;"></i>
+
+            </span>
+            <span>
+              <i class="fa-solid fa-magnifying-glass" style="color: white;"></i>
+              <i class="fa-solid fa-up-right-from-square" style="color: white;"></i>
+            </span>
+      
+
+          </div>
+          <div class="wraping">
+            <h1 style="color: aliceblue;">well come</h1>
+          </div>
+        </div>
 
         <div class="left">
-            <div class="left1">
-                <div class="setting-row">
-                    <button id="toggleBtn" class="btn" >history</button> 
-                    <button id="togglePopup" class="btn">setting</button>
-                  </div>
+            <div class="left1" id="rightPanel"></div>
 
-                  <div id="popupModal" class="modal">
-                    <div class="modal-content">
-                      <span class="close" id="closePopup">&times;</span>
-                      <a href="#">Home</a>
-                      <a href="#">About</a>
-                      <a href="#">Services</a>
-                      <a href="#">Contact</a>
+            <div class="left2">
+                <div class="search1">
+                  <div class="settings-panel" id="toggleBtn">
+                    <i class="fa-solid fa-gear"></i>
+                  </div>
+            
+                  <div class="search">
+                    <input type="text" placeholder="Search" class="searchInput" />
+                    <div class="searchIcon">
+                      <i class="fa fa-search"></i>
                     </div>
                   </div>
-
-          
-              <!-- Sidebar -->
-              <div id="sidebar" class="sidebar">
-                <div class="open">
-                    <div class="header-row">
-                      <div class="edit">
-                        <box-icon name="edit" id="editToggle"></box-icon>
-                      </div>
-                      <div class="newChat">
-                        <box-icon name="message" style="color: aqua;"></box-icon>
-                        <box-icon name="plus-circle"></box-icon>
-                      </div>
-                    </div>
-                    <!-- Other elements in .open can go here -->
+            
+                  <div class="icons1">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <i class="fa-solid fa-copy"></i>
+                    <i class="fas fa-circle-down"></i>
+                    <i class="far fa-trash-alt"></i>
                   </div>
-                  
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
+                </div>
               </div>
-          
-            </div>
-          
-            <!-- Search input only -->
-             <div class="search1">
-            <div class="search">
-              <input type="text" placeholder="Search" class="searchInput" />
-              <div class="searchIcon">
-                <box-icon name='search'></box-icon>
+            
+              <!-- Sidebar panel -->
+              <div class="sidebar" id="sidebar">
+                <h3>Settings Panel</h3>
+                <p>This is the sliding panel content.</p>
               </div>
-            </div>
-          
-            <!-- Icons outside search -->
-            <div class="icons1">
-              <box-icon name='send'></box-icon>
-              <box-icon name='copy-alt'></box-icon>
-              <box-icon name='message-alt-x'></box-icon>
-              <box-icon type='solid' name='download'></box-icon>
-            </div>
+            
         </div>
-          </div>
+        <!-- done wit the right -->
+
+     
           
     </div>
     </div>

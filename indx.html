@@ -1,0 +1,24 @@
+<script>
+  // chat.js
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.getElementById('toggleExpand');
+  const leftPanel = document.getElementById('leftPanel');
+  const rightPanel = document.getElementById('rightPanel');
+
+  let isExpanded = false;
+
+  toggleBtn.addEventListener('click', () => {
+    isExpanded = !isExpanded;
+
+    if (isExpanded) {
+      leftPanel.classList.add('expanded-left');
+      rightPanel.classList.add('hide-right');
+    } else {
+      leftPanel.classList.remove('expanded-left');
+      rightPanel.classList.remove('hide-right');
+    }
+  });
+});
+
+</script>
